@@ -3,6 +3,7 @@ package com.xiangxu.vrvideo.viewer.activity;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -17,10 +18,8 @@ import butterknife.ButterKnife;
 
 public class SearchActivity extends AppCompatActivity {
 
-    @BindView(R.id.toolbar_container) FrameLayout mToolbarContainer;
     @BindView(R.id.video_list_view) RecyclerView mSearchUserListView;
     @BindView(R.id.toolbar) Toolbar mToolbar;
-    @BindView(R.id.search_view) MaterialSearchView mSearchView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,10 +43,12 @@ public class SearchActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.menu_search, menu);
         MenuItem item = menu.findItem(R.id.action_search);
-        mSearchView.setMenuItem(item);
-        mSearchView.showSearch(false);
+        SearchView searchView = (SearchView)item.getActionView();
+        searchView.setIconifiedByDefault(false);
+        searchView.requestFocus();
         return true;
     }
 

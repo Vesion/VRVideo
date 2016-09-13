@@ -8,34 +8,261 @@
     android:fitsSystemWindows="true"
     tools:context="com.xiangxu.vrvideo.viewer.activity.VideoProfileActivity">
 
-    <include layout="@layout/layout_toolbar" />
+    <!--header-->
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:fitsSystemWindows="true"
+        android:theme="@style/AppTheme.AppBarOverlay">
 
-    <android.support.v4.widget.SwipeRefreshLayout
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fitsSystemWindows="true"
+            app:contentScrim="@color/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <ImageView
+                android:id="@+id/title_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:fitsSystemWindows="true"
+                android:contentDescription="@string/title_activity_video_profile"
+                android:src="@drawable/demo_video_profile_xh"
+                app:layout_collapseMode="parallax"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <!--body-->
+    <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/swipe_refresh_layout"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
-        <android.support.v4.widget.NestedScrollView
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
+            <!--title-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:textSize="16sp"
+                android:text="无锡太湖，美丽家园"/>
+
+            <!--detail-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:background="@color/md_white_1000">
 
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp">
+                    <View style="@style/TitleBarStyleVideoProfile"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/detail_subtitle_activity_video_profile"
+                        android:layout_marginLeft="12dp"/>
+                </LinearLayout>
+                <View style="@style/SplitLineStyleMineItem"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="@string/large_text"/>
+                <View style="@style/SplitLineStyleMineItem"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_margin="12dp"
-                    android:text="@string/large_text"
-                    tools:showIn="@layout/activity_video_profile"/>
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/text_Tertiary"
+                    android:text="@string/more_activity_video_profile"/>
             </LinearLayout>
 
+            <!--plans-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="24dp"
+                android:background="@color/md_white_1000">
 
-        </android.support.v4.widget.NestedScrollView>
-    </android.support.v4.widget.SwipeRefreshLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp">
+                    <View style="@style/TitleBarStyleVideoProfile"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/plans_subtitle_activity_video_profile"
+                        android:layout_marginLeft="12dp"/>
+                </LinearLayout>
+                <View style="@style/SplitLineStyleMineItem"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:paddingLeft="16dp"
+                    android:paddingRight="16dp"
+                    android:text="@string/large_text"/>
+                <View style="@style/SplitLineStyleMineItem"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/text_Tertiary"
+                    android:text="@string/more_activity_video_profile"/>
+            </LinearLayout>
 
+            <!--comments-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="60dp"
+                android:background="@color/md_white_1000">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp">
+                    <View style="@style/TitleBarStyleVideoProfile"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/comments_subtitle_activity_video_profile"
+                        android:layout_marginLeft="12dp"/>
+                </LinearLayout>
+                <View style="@style/SplitLineStyleMineItem"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_margin="8dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/app_banner"
+                        app:civ_border_width="0dp"/>
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:textColor="@color/text_secondary"
+                        android:text="xuxiang"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginRight="8dp"
+                        android:textColor="@color/text_secondary"
+                        android:text="2015-09-24"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="12dp"
+                    android:paddingLeft="42dp"
+                    android:paddingRight="16dp"
+                    android:text="好的"/>
+                <View style="@style/SplitLineStyleMineItem"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/text_Tertiary"
+                    android:text="@string/more_activity_video_profile"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <!--bottom-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="center|bottom"
+        android:background="@color/md_grey_50"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:drawableTop="@drawable/ic_action_favorite"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:text="收藏"/>
+        <View style="@style/SplitLineStyleVideoProfileItem"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:drawableTop="@drawable/ic_content_send"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:text="评论"/>
+        <View style="@style/SplitLineStyleVideoProfileItem"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:background="@color/md_orange_700"
+            android:textColor="@color/md_white_1000"
+            android:textSize="16sp"
+            android:text="观看VR视频"/>
+    </LinearLayout>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        app:layout_anchor="@id/app_bar"
+        app:layout_anchorGravity="center|right"
+        app:backgroundTint="@android:color/transparent"
+        app:rippleColor="@color/md_grey_800"
+        app:elevation="0dp"
+        app:srcCompat="@android:drawable/ic_media_play"/>
 
 </android.support.design.widget.CoordinatorLayout>

@@ -8,6 +8,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -24,6 +26,7 @@ import butterknife.ButterKnife;
 
 public class ExploreFragment extends Fragment {
 
+    @BindView(R.id.toolbar) Toolbar mToolbar;
     @BindView(R.id.tabs_explore) TabLayout mTabLayout;
     @BindView(R.id.container) ViewPager mViewPager;
 
@@ -48,6 +51,11 @@ public class ExploreFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_explore, container, false);
         ButterKnife.bind(this, view);
+
+        // toolbar
+        ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
+        setHasOptionsMenu(true);
+        mToolbar.setTitle(R.string.title_toolbar_fragment_explore);
         return view;
     }
 

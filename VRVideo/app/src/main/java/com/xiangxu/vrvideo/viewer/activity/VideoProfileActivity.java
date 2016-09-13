@@ -3,6 +3,8 @@ package com.xiangxu.vrvideo.viewer.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -13,11 +15,12 @@ import com.xiangxu.vrvideo.util.LLog;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class VideoProfileActivity extends AppCompatActivity {
+public class VideoProfileActivity extends FullScreenActivity {
 
     public static final String VIDEO_PROFILE_ID = "video_profile_id";
 
     @BindView(R.id.toolbar) Toolbar mToolbar;
+    @BindView(R.id.fab) FloatingActionButton mPlayButton;
 
     String mVideoID;
 
@@ -33,8 +36,13 @@ public class VideoProfileActivity extends AppCompatActivity {
         setContentView(R.layout.activity_video_profile);
         ButterKnife.bind(this);
 
+        // get intent extra
+        mVideoID = getIntent().getStringExtra(VIDEO_PROFILE_ID);
+        LLog.d(mVideoID);
+
+        // toolbar
         setSupportActionBar(mToolbar);
-        mToolbar.setTitle(getTitle());
+        getSupportActionBar().setTitle("无锡太湖");
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -45,7 +53,14 @@ public class VideoProfileActivity extends AppCompatActivity {
             }
         });
 
-        mVideoID = getIntent().getStringExtra(VIDEO_PROFILE_ID);
-        LLog.d(mVideoID);
+        // floating action bar
+        mPlayButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
     }
 }

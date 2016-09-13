@@ -81,56 +81,56 @@
                 android:orientation="vertical">
 
                 <View
-                    style="@style/MineItemSplitLineStyle"
+                    style="@style/SplitLineStyleMineItem"
                     android:layout_marginTop="20dp"/>
                 <TextView
                     android:id="@+id/places_item"
                     style="@style/MineItemStyle"
                     android:drawableLeft="@drawable/ic_maps_place"
                     android:text="@string/places_item_fragment_mine" />
-                <View style="@style/MineItemSplitLineStyle"/>
+                <View style="@style/SplitLineStyleMineItem"/>
                 <TextView
                     android:id="@+id/favors_item"
                     style="@style/MineItemStyle"
                     android:drawableLeft="@drawable/ic_action_favorite"
                     android:text="@string/favors_item_fragment_mine" />
-                <View style="@style/MineItemSplitLineStyle"/>
+                <View style="@style/SplitLineStyleMineItem"/>
 
-                <View style="@style/MineItemSplitLineStyle"
+                <View style="@style/SplitLineStyleMineItem"
                       android:layout_marginTop="20dp"/>
                 <TextView
                     android:id="@+id/settings_item"
                     style="@style/MineItemStyle"
                     android:drawableLeft="@drawable/ic_action_settings"
                     android:text="@string/setting_item_fragment_mine" />
-                <View style="@style/MineItemSplitLineStyle"/>
+                <View style="@style/SplitLineStyleMineItem"/>
 
-                <View style="@style/MineItemSplitLineStyle"
+                <View style="@style/SplitLineStyleMineItem"
                       android:layout_marginTop="20dp"/>
                 <TextView
                     android:id="@+id/about_item"
                     style="@style/MineItemStyle"
                     android:drawableLeft="@drawable/ic_action_info_outline"
                     android:text="@string/about_item_fragment_mine" />
-                <View style="@style/MineItemSplitLineStyle"/>
+                <View style="@style/SplitLineStyleMineItem"/>
                 <TextView
                     android:id="@+id/feedback_item"
                     style="@style/MineItemStyle"
                     android:drawableLeft="@drawable/ic_content_send"
                     android:text="@string/feedback_item_fragment_mine" />
-                <View style="@style/MineItemSplitLineStyle"/>
+                <View style="@style/SplitLineStyleMineItem"/>
                 <TextView
                     android:id="@+id/commend_item"
                     style="@style/MineItemStyle"
                     android:drawableLeft="@drawable/ic_action_thumb_up"
                     android:text="@string/commend_item_fragment_mine" />
-                <View style="@style/MineItemSplitLineStyle"/>
+                <View style="@style/SplitLineStyleMineItem"/>
                 <TextView
                     android:id="@+id/share_item"
                     style="@style/MineItemStyle"
                     android:drawableLeft="@drawable/ic_social_share"
                     android:text="@string/share_item_fragment_mine" />
-                <View style="@style/MineItemSplitLineStyle"
+                <View style="@style/SplitLineStyleMineItem"
                     android:layout_marginBottom="20dp"/>
 
             </LinearLayout>

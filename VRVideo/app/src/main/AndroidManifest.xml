@@ -56,7 +56,7 @@
             android:name=".viewer.activity.HomeActivity"
             android:label="@string/vr_app_name"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.Trans">
+            android:theme="@style/AppTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
@@ -67,7 +67,7 @@
             android:name=".viewer.activity.VideoProfileActivity"
             android:label="@string/title_activity_video_profile"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme">
+            android:theme="@style/AppTheme.Trans">
         </activity>
         <activity
             android:name=".viewer.activity.SearchActivity"

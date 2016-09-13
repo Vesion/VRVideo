@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.xiangxu.vrvideo.R;
 
@@ -25,16 +26,15 @@ public class MineFragment extends Fragment
 
     @BindView(R.id.user_avatar_img) ImageView mUserAvatar;
     @BindView(R.id.user_account_text) LinearLayout mUserAccountText;
-    @BindView(R.id.user_account_enter) LinearLayout mUserAccountEnter;
+    @BindView(R.id.user_account_enter) ImageView mUserAccountEnter;
 
-
-    @BindView(R.id.places_item) LinearLayout mPlacesItem;
-    @BindView(R.id.favors_item) LinearLayout mFavorsItem;
-    @BindView(R.id.settings_item) LinearLayout mSettingsItem;
-    @BindView(R.id.about_item) LinearLayout mAboutItem;
-    @BindView(R.id.feedback_item) LinearLayout mFeedbackItem;
-    @BindView(R.id.commend_item) LinearLayout mCommendItem;
-    @BindView(R.id.share_item) LinearLayout mShareItem;
+    @BindView(R.id.places_item) TextView mPlacesItem;
+    @BindView(R.id.favors_item) TextView mFavorsItem;
+    @BindView(R.id.settings_item) TextView mSettingsItem;
+    @BindView(R.id.about_item) TextView mAboutItem;
+    @BindView(R.id.feedback_item) TextView mFeedbackItem;
+    @BindView(R.id.commend_item) TextView mCommendItem;
+    @BindView(R.id.share_item) TextView mShareItem;
 
     public MineFragment() {
         // Required empty public constructor
