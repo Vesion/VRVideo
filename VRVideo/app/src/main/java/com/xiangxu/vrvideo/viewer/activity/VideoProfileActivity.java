@@ -3,6 +3,7 @@ package com.xiangxu.vrvideo.viewer.activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
@@ -19,6 +20,7 @@ public class VideoProfileActivity extends FullScreenActivity {
 
     public static final String VIDEO_PROFILE_ID = "video_profile_id";
 
+    @BindView(R.id.collapsing_toolbar) CollapsingToolbarLayout mCollapsingToolbarLayout;
     @BindView(R.id.toolbar) Toolbar mToolbar;
     @BindView(R.id.fab) FloatingActionButton mPlayButton;
 
@@ -40,9 +42,10 @@ public class VideoProfileActivity extends FullScreenActivity {
         mVideoID = getIntent().getStringExtra(VIDEO_PROFILE_ID);
         LLog.d(mVideoID);
 
+        mCollapsingToolbarLayout.setTitle("无锡太湖");
+
         // toolbar
         setSupportActionBar(mToolbar);
-        getSupportActionBar().setTitle("无锡太湖");
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {

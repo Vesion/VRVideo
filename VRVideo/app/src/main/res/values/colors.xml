@@ -12,6 +12,9 @@
     <color name="text_secondary">@color/md_grey_600</color>
     <color name="text_Tertiary">@color/md_grey_500</color>
 
+    <color name="transparent">@android:color/transparent</color>
+
+
 
     <!-- google's material design colours from
 http://www.google.com/design/spec/style/color.html#color-ui-color-palette -->

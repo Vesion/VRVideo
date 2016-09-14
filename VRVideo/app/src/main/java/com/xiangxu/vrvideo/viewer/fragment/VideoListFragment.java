@@ -74,7 +74,7 @@ public class VideoListFragment extends SwipeRefreshFragment implements VideoList
 
         mVideos = mVideoListPresenter.getVideos(); // bind view and presenter
 
-        // setup adaper
+        // setup adapter
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         mAdapter = new Adapter(mVideos);
@@ -88,7 +88,7 @@ public class VideoListFragment extends SwipeRefreshFragment implements VideoList
             }
         };
 
-        // recyclerview dragup add-on
+        // recyclerview drag up add-on
         mVideoListView.addOnScrollListener(new RecyclerView.OnScrollListener() {
             int lastVisibleItem;
             int totalItemCount;

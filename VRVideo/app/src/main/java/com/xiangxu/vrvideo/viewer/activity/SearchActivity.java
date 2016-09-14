@@ -28,7 +28,7 @@ public class SearchActivity extends AppCompatActivity {
         ButterKnife.bind(this);
 
         setSupportActionBar(mToolbar);
-        mToolbar.setTitle(getTitle());
+        getSupportActionBar().setTitle(R.string.title_activity_search);
         getSupportActionBar().setHomeButtonEnabled(true);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         mToolbar.setNavigationOnClickListener(new View.OnClickListener() {

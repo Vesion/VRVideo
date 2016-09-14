@@ -4,20 +4,21 @@ package com.xiangxu.vrvideo.viewer.fragment;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+import android.support.annotation.Nullable;
+import android.support.v4.widget.NestedScrollView;
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.jude.rollviewpager.RollPagerView;
 import com.jude.rollviewpager.adapter.LoopPagerAdapter;
 import com.jude.rollviewpager.hintview.ColorPointHintView;
 import com.xiangxu.vrvideo.R;
+import com.xiangxu.vrvideo.util.LLog;
 import com.xiangxu.vrvideo.viewer.activity.SearchActivity;
 
 import butterknife.BindView;
@@ -26,7 +27,10 @@ import butterknife.ButterKnife;
 
 public class HomeFragment extends SwipeRefreshFragment {
 
-    @BindView(R.id.toolbar) Toolbar mToolbar;
+    @BindView(R.id.header) LinearLayout mHeaderView;
+    @BindView(R.id.address_text) TextView mAddressText;
+    @BindView(R.id.search_edit) EditText mSearchEdit;
+    @BindView(R.id.scrollview) NestedScrollView mScrollView;
     @BindView(R.id.roll_view_pager) RollPagerView mRollPagerView;
 
     public HomeFragment() {}
@@ -47,21 +51,27 @@ public class HomeFragment extends SwipeRefreshFragment {
         View view = inflater.inflate(R.layout.fragment_home, container, false);
         ButterKnife.bind(this, view);
 
-        // toolbar
-        ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
-        setHasOptionsMenu(true);
-        mToolbar.setTitle(R.string.title_fragment_home);
-
-        // search view
-        mToolbar.setOnMenuItemClickListener(new Toolbar.OnMenuItemClickListener() {
+        // search edit
+        mSearchEdit.setFocusable(false);
+        mSearchEdit.setOnClickListener(new View.OnClickListener() {
             @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                if (item.getItemId() == R.id.action_search) {
-                    // open search activity
-                    startActivity(new Intent(getContext(), SearchActivity.class));
-                    getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.nothing);
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), SearchActivity.class));
+                getActivity().overridePendingTransition(R.anim.slide_in_right, R.anim.nothing);
+            }
+        });
+
+        // fade header when scrolling
+        mHeaderView.getBackground().setAlpha(0);
+        mScrollView.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
+            int pHeight = getResources().getDimensionPixelOffset(R.dimen.roll_height_fragment_home);
+            @Override
+            public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                if (scrollY <= pHeight) {
+                    float p = (float)scrollY / pHeight;
+                    LLog.d(p);
+                    mHeaderView.getBackground().setAlpha((int)(255*p));
                 }
-                return true;
             }
         });
 
@@ -74,12 +84,6 @@ public class HomeFragment extends SwipeRefreshFragment {
         return view;
     }
 
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.menu_home, menu);
-    }
 
     class RollPagerAdapter extends LoopPagerAdapter {
         private int[] imgs = {

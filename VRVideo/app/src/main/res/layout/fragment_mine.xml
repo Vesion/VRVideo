@@ -18,14 +18,13 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@color/md_grey_100">
+            android:orientation="vertical">
 
             <!-- header account -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:background="@color/colorPrimary"
+                android:background="#076dc1"
                 android:orientation="horizontal"
                 android:padding="8dp">
 
@@ -35,7 +34,7 @@
                     android:layout_height="72dp"
                     android:layout_gravity="center_vertical"
                     android:layout_margin="8dp"
-                    android:src="@drawable/app_banner"
+                    android:src="@drawable/default_avatar_l"
                     app:civ_border_width="0dp" />
 
                 <LinearLayout

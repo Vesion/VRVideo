@@ -54,8 +54,7 @@ public class ExploreFragment extends Fragment {
 
         // toolbar
         ((AppCompatActivity) getActivity()).setSupportActionBar(mToolbar);
-        setHasOptionsMenu(true);
-        mToolbar.setTitle(R.string.title_toolbar_fragment_explore);
+        ((AppCompatActivity) getActivity()).getSupportActionBar().setTitle(R.string.title_fragment_explore);
         return view;
     }
 
