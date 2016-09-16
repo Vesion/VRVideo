@@ -14,6 +14,10 @@
 
     <color name="transparent">@android:color/transparent</color>
 
+    <color name="toolbar_home">#076dc1</color>
+    <color name="button_primary">@color/md_green_400</color>
+    <color name="line_primary">@color/md_grey_300</color>
+
 
 
     <!-- google's material design colours from

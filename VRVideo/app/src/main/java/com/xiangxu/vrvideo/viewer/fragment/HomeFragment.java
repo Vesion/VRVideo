@@ -61,20 +61,6 @@ public class HomeFragment extends SwipeRefreshFragment {
             }
         });
 
-        // fade header when scrolling
-        mHeaderView.getBackground().setAlpha(0);
-        mScrollView.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
-            int pHeight = getResources().getDimensionPixelOffset(R.dimen.roll_height_fragment_home);
-            @Override
-            public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
-                if (scrollY <= pHeight) {
-                    float p = (float)scrollY / pHeight;
-                    LLog.d(p);
-                    mHeaderView.getBackground().setAlpha((int)(255*p));
-                }
-            }
-        });
-
         // roll view pager
         mRollPagerView.setPlayDelay(4000);
         mRollPagerView.setAnimationDurtion(600);
@@ -84,13 +70,32 @@ public class HomeFragment extends SwipeRefreshFragment {
         return view;
     }
 
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        // fade header when scrolling
+        mHeaderView.getBackground().setAlpha(0);
+        final int pHeight = getResources().getDimensionPixelOffset(R.dimen.roll_height_fragment_home);
+        mScrollView.setOnScrollChangeListener(new NestedScrollView.OnScrollChangeListener() {
+            @Override
+            public void onScrollChange(NestedScrollView v, int scrollX, int scrollY, int oldScrollX, int oldScrollY) {
+                if (scrollY <= pHeight) {
+                    float p = (float)scrollY / pHeight;
+                    LLog.d(p);
+                    mHeaderView.getBackground().setAlpha((int)(255*p));
+                } else {
+                    mHeaderView.getBackground().setAlpha(255);
+                }
+            }
+        });
+    }
 
     class RollPagerAdapter extends LoopPagerAdapter {
         private int[] imgs = {
-                R.drawable.demo_video_preview,
-                R.drawable.demo_video_preview,
-                R.drawable.demo_video_preview,
-                R.drawable.demo_video_preview
+                R.drawable.demo_video_profile_xh,
+                R.drawable.demo_video_profile_xh,
+                R.drawable.demo_video_profile_xh,
+                R.drawable.demo_video_profile_xh
         };
 
         public RollPagerAdapter(RollPagerView viewPager) {

@@ -1,0 +1,62 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/md_white_1000"
+              android:orientation="vertical"
+              tools:context="com.xiangxu.vrvideo.viewer.fragment.LoginFragment">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/md_white_1000"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/user_name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="手机/邮箱/用户名"
+            android:inputType="text"
+            android:padding="16dp"
+            android:textSize="16sp"/>
+        <View
+            android:id="@+id/user_name_underline"
+            style="@style/SplitLineStyle"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+        <EditText
+            android:id="@+id/user_password_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textSize="16sp"/>
+        <View
+            android:id="@+id/user_password_underline"
+            style="@style/SplitLineStyle"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/login_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_green_button"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="@string/title_fragment_login"
+        android:textColor="@color/md_white_1000"
+        android:textSize="18sp"/>
+</LinearLayout>

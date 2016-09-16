@@ -8,6 +8,8 @@
     tools:context="com.xiangxu.vrvideo.viewer.fragment.HomeFragment">
 
 
+
+    <!--body-->
     <android.support.v4.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -23,27 +25,108 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
+
+                <!--ad-->
                 <com.jude.rollviewpager.RollPagerView
                     android:layout_width="match_parent"
-                    android:layout_height="180dp"
+                    android:layout_height="@dimen/roll_height_fragment_home"
                     android:id="@+id/roll_view_pager"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="800dp"
-                    android:layout_margin="12dp"
-                    android:text="太湖位于长江三角洲的南缘，古称震泽、具区，又名五湖、笠泽，是中国五大淡水湖之一。"
-                    tools:showIn="@layout/activity_video_profile"/>
+                <!--daily hot-->
+                <android.support.v7.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="6dp"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="1dp"
+                    app:cardPreventCornerOverlap="false"
+                    app:cardUseCompatPadding="true">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="12dp"
+                            android:layout_marginBottom="6dp">
+                            <View style="@style/TitleLeftBarStyle"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="16dp"
+                                android:text="@string/daily_subtitle_fragment_home"
+                                android:layout_marginLeft="8dp"/>
+                        </LinearLayout>
+                        <View style="@style/SplitLineStyle"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:layout_marginLeft="12dp"
+                            android:textSize="16sp"
+                            android:text="无锡太湖"/>
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="140dp"
+                            android:layout_marginTop="6dp"
+                            android:src="@drawable/demo_video_preview"
+                            android:scaleType="centerCrop"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:maxLines="3"
+                            android:textColor="@color/text_secondary"
+                            android:text="太湖位于长江三角洲的南缘，古称震泽、具区，又名五湖、笠泽，是中国五大淡水湖之一。"/>
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+                <!--local-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/md_white_1000">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="6dp">
+                        <View style="@style/TitleLeftBarStyle"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="16dp"
+                            android:text="@string/local_subtitle_fragment_home"
+                            android:layout_marginLeft="8dp"/>
+                    </LinearLayout>
+                    <View style="@style/SplitLineStyle"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="6dp">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
             </LinearLayout>
 
         </android.support.v4.widget.NestedScrollView>
+
     </android.support.v4.widget.SwipeRefreshLayout>
 
+    <!--tool bar-->
     <LinearLayout
         android:id="@+id/header"
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:background="@color/colorPrimary"
+        android:background="@color/toolbar_home"
         android:layout_height="56dp">
 
         <TextView

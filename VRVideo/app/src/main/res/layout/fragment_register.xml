@@ -1,0 +1,77 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/md_white_1000"
+              android:orientation="vertical"
+             tools:context="com.xiangxu.vrvideo.viewer.fragment.RegisterFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/md_white_1000"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/user_name_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="取一个昵称"
+            android:inputType="text"
+            android:padding="16dp"
+            android:textSize="16sp"/>
+        <View
+            android:id="@+id/user_name_underline"
+            style="@style/SplitLineStyle"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+        <EditText
+            android:id="@+id/user_phone_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="您的手机号"
+            android:inputType="phone"
+            android:padding="16dp"
+            android:textSize="16sp"/>
+        <View
+            android:id="@+id/user_phone_underline"
+            style="@style/SplitLineStyle"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+        <EditText
+            android:id="@+id/user_password_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:hint="填写密码"
+            android:inputType="textPassword"
+            android:padding="16dp"
+            android:textSize="16sp"/>
+        <View
+            android:id="@+id/user_password_underline"
+            style="@style/SplitLineStyle"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/register_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_green_button"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="@string/title_fragment_register"
+        android:textColor="@color/md_white_1000"
+        android:textSize="18sp"/>
+
+</LinearLayout>

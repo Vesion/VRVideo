@@ -8,6 +8,7 @@ import android.support.v4.widget.SwipeRefreshLayout;
 import android.view.View;
 
 import com.xiangxu.vrvideo.R;
+import com.xiangxu.vrvideo.util.LLog;
 
 import butterknife.BindView;
 

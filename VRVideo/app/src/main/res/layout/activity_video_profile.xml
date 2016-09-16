@@ -59,9 +59,39 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="12dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="12dp"
                 android:textSize="16sp"
                 android:text="无锡太湖，美丽家园"/>
+
+            <!--statistics-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginLeft="12dp"
+                android:layout_marginBottom="12dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    android:text="@string/favors_title_activity_video_profile"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    android:text="@string/collects_title_activity_video_profile"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="12dp"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="12sp"
+                    android:text="@string/comments_title_activity_video_profile"/>
+            </LinearLayout>
 
             <!--detail-->
             <LinearLayout
@@ -76,14 +106,14 @@
                     android:orientation="horizontal"
                     android:layout_marginTop="12dp"
                     android:layout_marginBottom="12dp">
-                    <View style="@style/TitleBarStyleVideoProfile"/>
+                    <View style="@style/TitleLeftBarStyle"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/detail_subtitle_activity_video_profile"
                         android:layout_marginLeft="12dp"/>
                 </LinearLayout>
-                <View style="@style/SplitLineStyleMineItem"/>
+                <View style="@style/SplitLineStyle"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -91,8 +121,9 @@
                     android:layout_marginBottom="12dp"
                     android:paddingLeft="16dp"
                     android:paddingRight="16dp"
+                    android:maxLines="5"
                     android:text="@string/large_text"/>
-                <View style="@style/SplitLineStyleMineItem"/>
+                <View style="@style/SplitLineStyle"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -117,14 +148,14 @@
                     android:orientation="horizontal"
                     android:layout_marginTop="12dp"
                     android:layout_marginBottom="12dp">
-                    <View style="@style/TitleBarStyleVideoProfile"/>
+                    <View style="@style/TitleLeftBarStyle"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/plans_subtitle_activity_video_profile"
                         android:layout_marginLeft="12dp"/>
                 </LinearLayout>
-                <View style="@style/SplitLineStyleMineItem"/>
+                <View style="@style/SplitLineStyle"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -132,8 +163,9 @@
                     android:layout_marginBottom="12dp"
                     android:paddingLeft="16dp"
                     android:paddingRight="16dp"
+                    android:maxLines="5"
                     android:text="@string/large_text"/>
-                <View style="@style/SplitLineStyleMineItem"/>
+                <View style="@style/SplitLineStyle"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -158,14 +190,14 @@
                     android:orientation="horizontal"
                     android:layout_marginTop="12dp"
                     android:layout_marginBottom="12dp">
-                    <View style="@style/TitleBarStyleVideoProfile"/>
+                    <View style="@style/TitleLeftBarStyle"/>
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/comments_subtitle_activity_video_profile"
                         android:layout_marginLeft="12dp"/>
                 </LinearLayout>
-                <View style="@style/SplitLineStyleMineItem"/>
+                <View style="@style/SplitLineStyle"/>
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -198,8 +230,9 @@
                     android:layout_marginBottom="12dp"
                     android:paddingLeft="42dp"
                     android:paddingRight="16dp"
+                    android:maxLines="5"
                     android:text="非常漂亮"/>
-                <View style="@style/SplitLineStyleMineItem"/>
+                <View style="@style/SplitLineStyle"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -227,6 +260,17 @@
             android:layout_weight="1"
             android:paddingTop="4dp"
             android:paddingBottom="4dp"
+            android:drawableTop="@drawable/ic_action_thumb_up"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:text="赞"/>
+        <View style="@style/SplitLineStyleVideoProfileItem"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
             android:drawableTop="@drawable/ic_action_favorite_outline"
             android:gravity="center"
             android:textSize="12sp"
@@ -246,7 +290,7 @@
         <TextView
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="3"
             android:gravity="center"
             android:background="@color/md_orange_700"
             android:textColor="@color/md_white_1000"

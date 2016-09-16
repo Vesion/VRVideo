@@ -27,7 +27,7 @@ import butterknife.ButterKnife;
 public class ExploreFragment extends Fragment {
 
     @BindView(R.id.toolbar) Toolbar mToolbar;
-    @BindView(R.id.tabs_explore) TabLayout mTabLayout;
+    @BindView(R.id.tabs) TabLayout mTabLayout;
     @BindView(R.id.container) ViewPager mViewPager;
 
     List<Fragment> mFragments;
@@ -80,27 +80,7 @@ public class ExploreFragment extends Fragment {
         PagerAdapter pagerAdapter = new PagerAdapter(fm);
         mViewPager.setAdapter(pagerAdapter);
         mViewPager.setOffscreenPageLimit(4);
-        mViewPager.addOnPageChangeListener(getPageChangeListener());
-
         mTabLayout.setupWithViewPager(mViewPager);
-        mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
-        mTabLayout.setTabMode(TabLayout.MODE_FIXED);
-    }
-
-    private ViewPager.OnPageChangeListener getPageChangeListener() {
-        return new ViewPager.OnPageChangeListener() {
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-            }
-
-            @Override
-            public void onPageSelected(int position) {
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int state) {
-            }
-        };
     }
 
     public class PagerAdapter extends FragmentPagerAdapter {

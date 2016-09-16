@@ -21,32 +21,38 @@
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light"/>
 
-    <!--Mine Fragment styles-->
-    <style name="SplitLineStyleMineItem">
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:layout_height">0.5dp</item>
-        <item name="android:background">@color/md_grey_300</item>
+    <!--common-->
+    <style name="TitleLeftBarStyle">
+        <item name="android:layout_width">4dp</item>
+        <item name="android:layout_height">16dp</item>
+        <item name="android:background">@color/colorPrimary</item>
     </style>
 
+    <style name="SplitLineStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.65dp</item>
+        <item name="android:background">@color/line_primary</item>
+    </style>
+
+    <!--Sign in activity-->
+    <style name="TabTextSignActivity" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!--Mine Fragment-->
     <style name="MineItemStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">50dp</item>
         <item name="android:paddingLeft">20dp</item>
         <item name="android:drawablePadding">20dp</item>
-        <item name="android:background">@drawable/bg_dark_item_click</item>
+        <item name="android:background">@drawable/bg_dark_item</item>
         <item name="android:clickable">true</item>
         <item name="android:focusable">true</item>
         <item name="android:gravity">left|center</item>
         <item name="android:textSize">16sp</item>
     </style>
 
-    <!--VideoProfile Activity styles-->
-    <style name="TitleBarStyleVideoProfile">
-        <item name="android:layout_width">4dp</item>
-        <item name="android:layout_height">16dp</item>
-        <item name="android:background">@color/colorPrimary</item>
-    </style>
-
+    <!--VideoProfile Activity-->
     <style name="SplitLineStyleVideoProfileItem">
         <item name="android:layout_width">0.5dp</item>
         <item name="android:layout_height">match_parent</item>

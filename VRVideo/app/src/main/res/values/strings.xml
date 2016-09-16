@@ -4,11 +4,11 @@
 
     <!--home fragment-->
     <string name="title_fragment_home">主页</string>
-    <string name="search_menu_fragment_home">搜索</string>
+    <string name="daily_subtitle_fragment_home">今日热门</string>
+    <string name="local_subtitle_fragment_home">附近景点</string>
 
     <!--explore fragment-->
     <string name="title_fragment_explore">发现</string>
-    <!--tab layout-->
     <string name="title1_tab_fragment_explore">推荐</string>
     <string name="title2_tab_fragment_explore">旅游</string>
     <string name="title3_tab_fragment_explore">房地产</string>
@@ -23,16 +23,19 @@
     <!--mine fragment-->
     <string name="title_fragment_mine">我的</string>
     <string name="places_item_fragment_mine">我的足迹</string>
-    <string name="favors_item_fragment_mine">我的收藏</string>
+    <string name="collects_item_fragment_mine">我的收藏</string>
     <string name="setting_item_fragment_mine">相关设置</string>
     <string name="about_item_fragment_mine">关于我们</string>
     <string name="feedback_item_fragment_mine">意见反馈</string>
     <string name="commend_item_fragment_mine">给予好评</string>
     <string name="share_item_fragment_mine">分享应用</string>
-
+    <string name="name_no_logged_fragment_mine">立即登录</string>
 
     <!--videl profile activity-->
     <string name="title_activity_video_profile">详情页</string>
+    <string name="favors_title_activity_video_profile">%1$d 赞</string>
+    <string name="collects_title_activity_video_profile">%1$d 收藏</string>
+    <string name="comments_title_activity_video_profile">%1$d 评论</string>
     <string name="more_activity_video_profile">查看全部 ></string>
     <string name="detail_subtitle_activity_video_profile">资源详情</string>
     <string name="plans_subtitle_activity_video_profile">旅游攻略</string>
@@ -42,12 +45,20 @@
     <string name="title_activity_search">搜索页</string>
     <string name="search_menu_activity_search">搜索</string>
 
+    <!--sign in|up activity-->
+    <string name="title_activity_sign">登录 | 注册</string>
+    <string name="title_fragment_login">登录</string>
+    <string name="title_fragment_register">注册</string>
+
     <!--tests-->
     <string name="title_activity_test">TestActivity</string>
     <string name="action_settings">Settings</string>
     <string name="large_text">
 太湖位于长江三角洲的南缘，古称震泽、具区，又名五湖、笠泽，是中国五大淡水湖之一。太湖位于长江三角洲的南缘，古称震泽、具区，又名五湖、笠泽，是中国五大淡水湖之一。太湖位于长江三角洲的南缘，古称震泽、具区，又名五湖、笠泽，是中国五大淡水湖之一。
     </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 
 </resources>

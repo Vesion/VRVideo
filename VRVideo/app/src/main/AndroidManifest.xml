@@ -53,7 +53,7 @@
                 android:value="true"/>
         </activity>
         <activity
-            android:name=".viewer.activity.HomeActivity"
+            android:name=".viewer.activity.LoadingActivity"
             android:label="@string/vr_app_name"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
@@ -64,6 +64,12 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".viewer.activity.HomeActivity"
+            android:label="@string/vr_app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
             android:name=".viewer.activity.VideoProfileActivity"
             android:label="@string/title_activity_video_profile"
             android:screenOrientation="portrait"
@@ -72,6 +78,12 @@
         <activity
             android:name=".viewer.activity.SearchActivity"
             android:label="@string/title_activity_search"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme">
+        </activity>
+        <activity
+            android:name=".viewer.activity.SignInUpActivityActivity"
+            android:label="@string/title_activity_sign"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme">
         </activity>

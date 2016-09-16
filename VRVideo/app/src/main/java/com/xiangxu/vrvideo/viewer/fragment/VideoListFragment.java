@@ -1,7 +1,5 @@
 package com.xiangxu.vrvideo.viewer.fragment;
 
-import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
@@ -16,7 +14,6 @@ import com.xiangxu.vrvideo.R;
 import com.xiangxu.vrvideo.model.Video;
 import com.xiangxu.vrvideo.model.VideoCategory;
 import com.xiangxu.vrvideo.presenter.VideoListPresenter;
-import com.xiangxu.vrvideo.viewer.activity.HomeActivity;
 import com.xiangxu.vrvideo.viewer.activity.VideoProfileActivity;
 import com.xiangxu.vrvideo.viewer.viewinterface.VideoListViewInterface;
 
@@ -140,7 +137,7 @@ public class VideoListFragment extends SwipeRefreshFragment implements VideoList
         @Override
         public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
             final View itemView = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.layout_video_list_item, parent, false);
+                    .inflate(R.layout.layout_video_item_card, parent, false);
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(final View v) {

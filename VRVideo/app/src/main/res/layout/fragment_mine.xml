@@ -22,9 +22,10 @@
 
             <!-- header account -->
             <LinearLayout
+                android:id="@+id/user_account_layout"
                 android:layout_width="match_parent"
                 android:layout_height="120dp"
-                android:background="#076dc1"
+                android:background="@color/colorPrimary"
                 android:orientation="horizontal"
                 android:padding="8dp">
 
@@ -38,13 +39,13 @@
                     app:civ_border_width="0dp" />
 
                 <LinearLayout
-                    android:id="@+id/user_account_text"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:orientation="vertical"
                     android:layout_weight="1"
                     android:layout_gravity="center_vertical">
                     <TextView
+                        android:id="@+id/user_name_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:paddingLeft="4dp"
@@ -52,7 +53,7 @@
                         android:textSize="20sp"
                         android:text="xuxiang"/>
                     <TextView
-                        android:id="@+id/user_description_txt"
+                        android:id="@+id/user_phone_text"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
@@ -80,56 +81,56 @@
                 android:orientation="vertical">
 
                 <View
-                    style="@style/SplitLineStyleMineItem"
+                    style="@style/SplitLineStyle"
                     android:layout_marginTop="20dp"/>
                 <TextView
                     android:id="@+id/places_item"
                     style="@style/MineItemStyle"
                     android:drawableLeft="@drawable/ic_maps_place"
                     android:text="@string/places_item_fragment_mine" />
-                <View style="@style/SplitLineStyleMineItem"/>
+                <View style="@style/SplitLineStyle"/>
                 <TextView
-                    android:id="@+id/favors_item"
+                    android:id="@+id/collects_item"
                     style="@style/MineItemStyle"
                     android:drawableLeft="@drawable/ic_action_favorite"
-                    android:text="@string/favors_item_fragment_mine" />
-                <View style="@style/SplitLineStyleMineItem"/>
+                    android:text="@string/collects_item_fragment_mine" />
+                <View style="@style/SplitLineStyle"/>
 
-                <View style="@style/SplitLineStyleMineItem"
+                <View style="@style/SplitLineStyle"
                       android:layout_marginTop="20dp"/>
                 <TextView
                     android:id="@+id/settings_item"
                     style="@style/MineItemStyle"
                     android:drawableLeft="@drawable/ic_action_settings"
                     android:text="@string/setting_item_fragment_mine" />
-                <View style="@style/SplitLineStyleMineItem"/>
+                <View style="@style/SplitLineStyle"/>
 
-                <View style="@style/SplitLineStyleMineItem"
+                <View style="@style/SplitLineStyle"
                       android:layout_marginTop="20dp"/>
                 <TextView
                     android:id="@+id/about_item"
                     style="@style/MineItemStyle"
                     android:drawableLeft="@drawable/ic_action_info_outline"
                     android:text="@string/about_item_fragment_mine" />
-                <View style="@style/SplitLineStyleMineItem"/>
+                <View style="@style/SplitLineStyle"/>
                 <TextView
                     android:id="@+id/feedback_item"
                     style="@style/MineItemStyle"
                     android:drawableLeft="@drawable/ic_content_send"
                     android:text="@string/feedback_item_fragment_mine" />
-                <View style="@style/SplitLineStyleMineItem"/>
+                <View style="@style/SplitLineStyle"/>
                 <TextView
                     android:id="@+id/commend_item"
                     style="@style/MineItemStyle"
                     android:drawableLeft="@drawable/ic_action_thumb_up"
                     android:text="@string/commend_item_fragment_mine" />
-                <View style="@style/SplitLineStyleMineItem"/>
+                <View style="@style/SplitLineStyle"/>
                 <TextView
                     android:id="@+id/share_item"
                     style="@style/MineItemStyle"
                     android:drawableLeft="@drawable/ic_social_share"
                     android:text="@string/share_item_fragment_mine" />
-                <View style="@style/SplitLineStyleMineItem"
+                <View style="@style/SplitLineStyle"
                     android:layout_marginBottom="20dp"/>
 
             </LinearLayout>

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.xiangxu.vrvideo.viewer.fragment.ExploreFragment">
+    tools:context="com.xiangxu.vrvideo.viewer.activity.SignInUpActivityActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -27,11 +28,13 @@
             android:id="@+id/tabs"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
             app:tabGravity="fill"
             app:tabMode="fixed"
-            app:tabIndicatorColor="@color/colorPrimary"
-            app:tabSelectedTextColor="@color/colorPrimary"
-            app:tabTextColor="@color/text_primary"/>
+            app:tabIndicatorColor="@color/md_white_1000"
+            app:tabSelectedTextColor="@color/md_white_1000"
+            app:tabTextAppearance="@style/TabTextSignActivity"
+            app:tabTextColor="@color/md_grey_300"/>
 
     </android.support.design.widget.AppBarLayout>
 
