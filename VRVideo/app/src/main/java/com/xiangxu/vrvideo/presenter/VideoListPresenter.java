@@ -1,6 +1,6 @@
 package com.xiangxu.vrvideo.presenter;
 
-import com.xiangxu.vrvideo.model.Video;
+import com.xiangxu.vrvideo.model.entity.Video;
 import com.xiangxu.vrvideo.viewer.viewinterface.VideoListViewInterface;
 
 import java.util.ArrayList;
@@ -48,6 +48,6 @@ public class VideoListPresenter extends BasePresenter<VideoListViewInterface> {
         mVideos.add(v);
 
         // call viewer to update UI
-        mViewInterface.updateVidelListView();
+        mViewInterface.updateVideoListView();
     }
 }

@@ -11,8 +11,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.xiangxu.vrvideo.R;
-import com.xiangxu.vrvideo.model.Video;
-import com.xiangxu.vrvideo.model.VideoCategory;
+import com.xiangxu.vrvideo.model.entity.Video;
+import com.xiangxu.vrvideo.model.entity.VideoCategory;
 import com.xiangxu.vrvideo.presenter.VideoListPresenter;
 import com.xiangxu.vrvideo.viewer.activity.VideoProfileActivity;
 import com.xiangxu.vrvideo.viewer.viewinterface.VideoListViewInterface;
@@ -29,7 +29,6 @@ public class VideoListFragment extends SwipeRefreshFragment implements VideoList
 
     @BindView(R.id.video_list_view) RecyclerView mVideoListView;
 
-    List<Video> mVideos;
     VideoCategory mVideoCategory;
     VideoListPresenter mVideoListPresenter;
     Adapter mAdapter;
@@ -69,12 +68,10 @@ public class VideoListFragment extends SwipeRefreshFragment implements VideoList
         mVideoListPresenter = new VideoListPresenter(this);
         mVideoListPresenter.create();
 
-        mVideos = mVideoListPresenter.getVideos(); // bind view and presenter
-
         // setup adapter
         final LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
-        mAdapter = new Adapter(mVideos);
+        mAdapter = new Adapter(mVideoListPresenter.getVideos());
         mVideoListView.setLayoutManager(layoutManager);
         mVideoListView.setAdapter(mAdapter);
         onVideoItemClickListener = new onVideoItemClickListener() {
@@ -121,7 +118,7 @@ public class VideoListFragment extends SwipeRefreshFragment implements VideoList
 
     // called by presenter
     @Override
-    public void updateVidelListView() {
+    public void updateVideoListView() {
         mAdapter.notifyDataSetChanged();
     }
 

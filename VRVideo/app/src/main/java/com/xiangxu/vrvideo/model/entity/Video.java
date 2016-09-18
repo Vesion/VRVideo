@@ -1,4 +1,4 @@
-package com.xiangxu.vrvideo.model;
+package com.xiangxu.vrvideo.model.entity;
 
 import retrofit2.http.Url;
 

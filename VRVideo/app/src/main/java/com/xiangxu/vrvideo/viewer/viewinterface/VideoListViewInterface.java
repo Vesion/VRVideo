@@ -6,5 +6,5 @@ package com.xiangxu.vrvideo.viewer.viewinterface;
  */
 
 public interface VideoListViewInterface extends BaseViewInterface {
-    void updateVidelListView();
+    void updateVideoListView();
 }

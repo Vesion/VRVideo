@@ -1,4 +1,4 @@
-package com.xiangxu.vrvideo.model;
+package com.xiangxu.vrvideo.model.entity;
 
 /**
  * Created by xuxiang on 2016/9/7.
