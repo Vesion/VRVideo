@@ -39,3 +39,4 @@ captures/
 # Keystore files
 *.jks
 VRVideo/.idea/
+VRVideo/app/src/main/assets

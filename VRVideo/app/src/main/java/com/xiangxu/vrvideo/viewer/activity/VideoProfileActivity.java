@@ -9,20 +9,25 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.TextView;
 
 import com.xiangxu.vrvideo.R;
 import com.xiangxu.vrvideo.util.LLog;
+import com.xiangxu.vrvideo.viewer.unity.UnityPlayerActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class VideoProfileActivity extends FullScreenActivity {
+public class VideoProfileActivity extends FullScreenActivity
+    implements  View.OnClickListener {
 
     public static final String VIDEO_PROFILE_ID = "video_profile_id";
 
     @BindView(R.id.collapsing_toolbar) CollapsingToolbarLayout mCollapsingToolbarLayout;
     @BindView(R.id.toolbar) Toolbar mToolbar;
-    @BindView(R.id.fab) FloatingActionButton mPlayButton;
+    @BindView(R.id.play_fab) FloatingActionButton mPlayFab;
+    @BindView(R.id.play_button)
+    TextView mPlayButton;
 
     String mVideoID;
 
@@ -56,14 +61,20 @@ public class VideoProfileActivity extends FullScreenActivity {
             }
         });
 
-        // floating action bar
-        mPlayButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
+        mPlayButton.setOnClickListener(this);
+        mPlayFab.setOnClickListener(this);
 
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.play_button:
+            case R.id.play_fab:
+                LLog.d("open unity");
+                Intent intent = new Intent(this, UnityPlayerActivity.class);
+                startActivity(intent);
+                break;
+        }
     }
 }
